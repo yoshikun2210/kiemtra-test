@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="em" type="text">
+<button onclick="nhaptuoi()">Nhập tuổi</button>
+<p id="anh">Tuổi anh</p>
+<p id="bo">Tuổi bố</p>
+
+<script>
+  function nhaptuoi() {
+    let em = +document.getElementById("em").value;
+    if (em <=0){
+      alert("Tuổi lớn hơn 0")
+    }else{
+      let anh = em + 3
+      let bo= anh * 6
+      document.getElementById("anh").innerText="Tuổi của anh"+ anh;
+      document.getElementById("bo").innerText="Tuổi của bố"+ bo ;
+    }
+
+
+  }
+</script>
+</body>
+</html>

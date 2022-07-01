@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập 3 cạnh của tam giác vuông</p>
+<input id="a" type="text">
+<input id="b" type="text">
+<input id="c" type="text">
+<button onclick="ketqua()">Kiemtra</button>
+<p id="result"></p>
+<script>
+  function ketqua() {
+    let a =+document.getElementById("a").value;
+    let b =+document.getElementById("b").value;
+    let c =+document.getElementById("c").value;
+    if (a < 0 || b < 0 || c < 0 )
+    {
+      document.getElementById("result").innerText= "cạnh của tam giác phai > 0";
+    }
+    else if ((a * a == b * b + c * c)||(b * b == c * c + a * a)|| (c * c == a * a + b * b))
+    {
+      document.getElementById("result").innerText= "là tam giác vuông";
+    }
+    else
+    {
+      document.getElementById("result").innerText="Là tam giác thường";
+    }
+  }
+
+
+
+
+
+</script>
+</body>
+</html>
